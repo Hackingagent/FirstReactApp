@@ -9,9 +9,11 @@
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+    "expo-env.d.ts",
+    "app/_layout.jsx",
+    "nativewind-env.d.ts"
+, "app/+not-found.jsx", "app/(tabs)/_layout.jsx", "components/CustomButton.jsx"  ]
 }
