@@ -5,8 +5,13 @@ import "../global.css"
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '@/constants';
 import CustomButton from '@/components/CustomButton';
+import { useGlobalContext } from '@/context/GlobalProvider';
 
 export default function App() {
+
+  const {isLoading, isLoggedIn} = useGlobalContext();
+
+  if(!isLoading && isLoggedIn) return <Redirect href='/home' />
   return (
     <SafeAreaView className='bg-primary h-full'>
       {/**In order to scroll through the page we need to but the content of the page inside a
